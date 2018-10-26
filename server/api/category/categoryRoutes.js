@@ -5,7 +5,7 @@ var logger = require('../../util/logger');
 // for building
 router.route('/')
   .get(function(req, res){
-    logger.log('Hey from user!!');
+    logger.log('Hey from category!');
     res.send({ok: true});
   });
 
