@@ -18,7 +18,7 @@ var envConfig ;
 try {
   envConfig = require('./' + config.env);
   envConfig = envConfig || {};
-} catch(e) {
+} catch (e) {
   envConfig = {};
 }
 
