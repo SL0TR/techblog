@@ -1,0 +1,38 @@
+# Create a user
+# POST http://localhost:3000/api/users HTTP/1.1
+# content-type: application/json
+
+# {
+#   "username": "test 3"
+# }
+
+
+# Create a category
+# POST http://localhost:3000/api/categories HTTP/1.1
+# content-type: application/json
+
+# {
+#   "name": "cats"
+# }
+
+
+# Create a post
+# POST http://localhost:3000/api/posts HTTP/1.1
+# content-type: application/json
+
+# {
+#   "author": "5bd41334e868ef449821ea74",
+#   "title": "Test post",
+#   "text": "Blah blah"
+# }
+
+
+ 
+# Get users
+# GET http://localhost:3000/api/users HTTP/1.1
+
+
+# Get Posts
+# GET http://localhost:3000/api/posts/5bd413d6e868ef449821ea75
+
+
