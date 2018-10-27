@@ -2,7 +2,13 @@ var logger = require('../util/logger');
 
 module.exports = function() {
   return function(err, req, res, next) {
-    logger.log('This is the error', err.message);
-    res.status(500);
+
+    // if error thrown from jwt validation check
+    if (err.name === 'UnauthorizedError') {
+      res.status(401).send('Invalid token');
+      return;
+    }
+    logger.error(err.stack);
+    res.status(500).send('Oops');
   };
 }
