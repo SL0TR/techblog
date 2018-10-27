@@ -33,7 +33,7 @@
 
 
 # Get Posts
-GET http://localhost:4000/api/posts
+# GET http://localhost:4000/api/posts
 
 
 # Create user

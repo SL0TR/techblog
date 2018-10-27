@@ -1,9 +1,10 @@
-var express = require('express');
-var app = express();
-var api = require('./api/api');
-var err = require('./middleware/err');
-var config = require('./config/config');
-var auth = require('./auth/routes');
+const express = require('express');
+const app = express();
+const api = require('./api/api');
+const err = require('./middleware/err');
+const config = require('./config/config');
+const auth = require('./auth/routes');
+
 
 // db.url is different depending on NODE_ENV
 require('mongoose').connect(config.db.url, { useNewUrlParser: true });
