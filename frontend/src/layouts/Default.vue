@@ -9,7 +9,7 @@
         color="info"
         href="/login"
       >
-        <span class="mr-2">Login</span>
+        <span class="mr-2">Login / Signup</span>
       </v-btn>
     </v-toolbar>
     <div class="div">
