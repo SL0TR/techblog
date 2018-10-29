@@ -2,6 +2,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var override = require('method-override');
+require('dotenv').load();
 // setup global middleware here
 
 module.exports = function(app) {

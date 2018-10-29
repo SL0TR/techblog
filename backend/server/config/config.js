@@ -1,4 +1,5 @@
 var _ = require('lodash');
+require('dotenv').load();
 
 var config = {
   dev: 'development',
@@ -8,9 +9,10 @@ var config = {
   // 10 days in minutes
   expireTime: 24 * 60 * 10,
   secrets: {
-    jwt: process.env.JWT || 'gumball'
+    jwt: process.env.JWT
   }
 };
+
 
 process.env.NODE_ENV = process.env.NODE_ENV || config.dev;
 config.env = process.env.NODE_ENV;
