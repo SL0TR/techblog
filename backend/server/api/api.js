@@ -1,5 +1,4 @@
-var router = require('express').Router();
-
+const router = require('express').Router();
 
 router.use('/users', require('./user/userRoutes'));
 router.use('/categories', require('./category/categoryRoutes'));

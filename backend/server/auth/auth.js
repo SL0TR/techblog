@@ -1,8 +1,8 @@
-var jwt = require('jsonwebtoken');
-var expressJwt = require('express-jwt');
-var config = require('../config/config');
-var checkToken = expressJwt({ secret: config.secrets.jwt });
-var User = require('../api/user/userModel');
+const jwt = require('jsonwebtoken');
+const expressJwt = require('express-jwt');
+const config = require('../config/config');
+const checkToken = expressJwt({ secret: config.secrets.jwt });
+const User = require('../api/user/userModel');
 
 exports.decodeToken = function() {
   return function(req, res, next) {

@@ -1,5 +1,5 @@
-var Category = require('./categoryModel');
-var _ = require('lodash');
+const Category = require('./categoryModel');
+const _ = require('lodash');
 
 exports.params = function(req, res, next, id) {
   Category.findById(id)
@@ -21,7 +21,7 @@ exports.get = function(req, res, next) {
   Category.find({})
     .then(function(categories){
       res.json(categories);
-    }, function(err){
+    }, function(err) {
       next(err);
     });
 };

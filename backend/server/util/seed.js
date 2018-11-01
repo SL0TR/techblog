@@ -1,8 +1,8 @@
-var User = require('../api/user/userModel');
-var Post = require('../api/post/postModel');
-var Category = require('../api/category/categoryModel');
-var _ = require('lodash');
-var logger = require('./logger');
+const User = require('../api/user/userModel');
+const Post = require('../api/post/postModel');
+const Category = require('../api/category/categoryModel');
+const _ = require('lodash');
+const logger = require('./logger');
 
 logger.log('Seeding the Database');
 

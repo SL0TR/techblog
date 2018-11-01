@@ -1,7 +1,7 @@
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var override = require('method-override');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const override = require('method-override');
 require('dotenv').load();
 // setup global middleware here
 

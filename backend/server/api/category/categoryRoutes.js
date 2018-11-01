@@ -1,6 +1,6 @@
-var router = require('express').Router();
-var controller = require('./categoryController');
-var createRoutes = require('../../util/createRoutes');
+const router = require('express').Router();
+const controller = require('./categoryController');
+const createRoutes = require('../../util/createRoutes');
 
 createRoutes(controller, router);
 

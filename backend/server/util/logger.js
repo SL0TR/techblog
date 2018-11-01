@@ -1,9 +1,9 @@
 // no var needed here, colors will attached colors
 // to String.prototype
 require('colors');
-var _ = require('lodash');
+const _ = require('lodash');
 
-var config = require('../config/config');
+const config = require('../config/config');
 
 // create a noop (no operation) function for when loggin is disabled
 var noop = function(){};
