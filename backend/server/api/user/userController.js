@@ -4,6 +4,8 @@ const signToken = require('../../auth/auth').signToken;
 
 exports.params = function(req, res, next, id) {
   User.findById(id)
+    .select('-password')
+    .exec()
     .then(function(user) {
       if (!user) {
         next(new Error('No user with that id'));
@@ -67,3 +69,7 @@ exports.delete = function(req, res, next) {
     }
   });
 };
+
+exports.me = function(req, res) {
+  res.json(req.user.toJson());
+}

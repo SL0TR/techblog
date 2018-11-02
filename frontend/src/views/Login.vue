@@ -1,11 +1,11 @@
 <template>
-  <v-content>
+  <v-content class="pa-0">
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
             <v-card class="elevation-12">
               <v-toolbar dark color="primary">
-                <v-toolbar-title>{{ !signupBtn ? 'Login Form' : 'Signup Form' }}</v-toolbar-title>
+                <v-toolbar-title>Login / Signup</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
                 <v-form>
@@ -16,7 +16,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="getData()"> {{ !signupBtn ? 'Login' : 'Signup' }}</v-btn>
+                <v-btn color="primary" @click="getData()">Submit</v-btn>
               </v-card-actions>
               <v-alert
                   v-model="signup"

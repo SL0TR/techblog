@@ -4,15 +4,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import Admin from './layouts/Admin.vue'
-import Blogger from './layouts/Blogger.vue'
+import User from './layouts/User.vue'
 import Default from './layouts/Default.vue'
 
-Vue.component('admin-layout', Admin)
-Vue.component('blogger-layout', Blogger)
+Vue.component('user-layout', User)
 Vue.component('default-layout', Default)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
   router,

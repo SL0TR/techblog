@@ -43,3 +43,11 @@
 # {
 #   "username": "Jimmy"
 # }
+
+POST http://localhost:4000/auth/signin HTTP/1.1
+content-type: application/json
+
+{
+  "username": "Jimmylo",
+  "password": "test"
+}

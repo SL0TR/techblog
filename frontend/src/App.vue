@@ -1,10 +1,8 @@
 <template>
   <v-app>
-    <v-content>
-      <component :is="layout">
-        <router-view/>
-      </component>
-    </v-content>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </v-app>
 </template>
 
@@ -24,3 +22,12 @@ export default {
   }
 }
 </script>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+</style>
