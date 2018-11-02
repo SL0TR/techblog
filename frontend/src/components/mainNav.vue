@@ -6,22 +6,51 @@
     <v-spacer></v-spacer>
     <v-btn
       flat
+      color="orange"
       href="/blog"
     >
       <span class="mr-2">Blog</span>
     </v-btn>
     <v-btn
-      outline
+      v-if="!checkSignIn()"
+      dark
+      color="orange"
       href="/login"
     >
       <span class="mr-2">Login / Signup</span>
+    </v-btn>
+    <v-btn
+      v-if="checkSignIn()"
+      dark
+      color="orange"
+      @click="logout"
+    >
+      <span class="mr-2">Logout</span>
     </v-btn>
   </v-toolbar>
 </template>
 
 <script>
-export default {
+import { mapGetters, mapActions } from 'vuex'
 
+export default {
+  methods: {
+    ...mapGetters([
+      'isAuthenticated'
+    ]),
+    ...mapActions([
+      'LOGOUT'
+    ]),
+    logout () {
+      this.LOGOUT()
+      this.$router.push({ name: 'login' })
+    }
+  },
+  computed: {
+    checkSignIn () {
+      return this.isAuthenticated
+    }
+  }
 }
 </script>
 
