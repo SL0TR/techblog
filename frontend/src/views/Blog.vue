@@ -6,12 +6,12 @@
       <v-flex xs4 v-for="(post, i) in this.blogs()" :key="i" transition="slide-x-transition">
         <v-card class="blog-cards">
           <v-card-title primary-title>
-            <h2 class="headline mb-0 text-truncate">{{ post.title }}</h2>
-            <p class="mt-3 text-truncate"> {{ post.text }} </p>
+            <h2 class="headline mb-0 text-truncate text-xs-left primary--text">{{ post.title }}</h2>
+            <p class="mt-3 text-truncate text-xs-left"> {{ post.text }} </p>
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat large color="primary" @click="singleBlog(post)">Read</v-btn>
+            <v-btn flat large color="secondary" @click="singleBlog(post)">Read</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -63,12 +63,7 @@ export default {
 
   .blog-cards p,
   .blog-cards h2 {
-    /* text-overflow: ellipsis;
-    overflow: hidden;
     width: 100%;
-    height: 1.2em;
-    white-space: nowrap;
-    text-align: start; */
   }
 
   .v-footer {

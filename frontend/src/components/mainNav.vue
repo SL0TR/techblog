@@ -1,7 +1,7 @@
 <template>
   <v-toolbar app dark color="primary">
     <v-toolbar-title class="headline" >
-      <router-link to="/">TechBlog</router-link>
+      <router-link to="/"> <span class="white--text font-weight-light headline">Tech</span><span class="secondary--text font-weight-black headline">Blog</span></router-link>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn
@@ -9,22 +9,24 @@
       flat
       dark
       href="/blogger"
+      large
     >
-      <span class="mr-2">Create</span>
+      <v-icon size="15px">fas fa-plus</v-icon>
+      <span class="ml-2">Create</span>
     </v-btn>
     <v-btn
       href="/blog"
       flat
       large
     >
-      <span class="mr-2">Blog</span>
+      <v-icon size="15px">fas fa-pen</v-icon>
+      <span class="ml-2">Blog</span>
     </v-btn>
     <v-btn
       v-if="!checkSignIn()"
       dark
       color="secondary"
       href="/login"
-      large
     >
       <span class="mr-2">Login / Signup</span>
     </v-btn>
@@ -33,9 +35,9 @@
       dark
       color="secondary"
       @click="logout"
-      large
     >
-      <span class="mr-2">Logout</span>
+      <v-icon size="15px">fas fa-sign-in-alt</v-icon>
+      <span class="ml-2">Logout</span>
     </v-btn>
   </v-toolbar>
 </template>
@@ -67,7 +69,6 @@ export default {
 <style scoped>
 .headline a {
   text-decoration: none;
-  color: #fff;
 }
 
 </style>

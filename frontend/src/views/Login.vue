@@ -8,17 +8,17 @@
           </v-toolbar>
           <v-card-text>
             <v-form>
-              <v-text-field prepend-icon="person" name="username" label="Username" type="text" v-model="user.username"></v-text-field>
-              <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password"  v-model="user.password"></v-text-field>
-              <v-text-field v-if="isSignUp" id="re-password" prepend-icon="lock" name="re-password" label="Re Enter Password" type="password"  v-model="user.rePassword" :error="user.password === user.rePassword ? false : true"></v-text-field>
+              <v-text-field prepend-icon="far fa-user" name="username" label="Username" type="text" v-model="user.username"></v-text-field>
+              <v-text-field id="password" prepend-icon="fas fa-unlock-alt" name="password" label="Password" type="password"  v-model="user.password"></v-text-field>
+              <v-text-field v-if="isSignUp" id="re-password" prepend-icon="fas fa-unlock-alt" name="re-password" label="Re Enter Password" type="password"  v-model="user.rePassword" :error="user.password === user.rePassword ? false : true"></v-text-field>
             </v-form>
           </v-card-text>
           <v-card-actions class="pb-3">
-            <v-btn v-if="!isSignUp" dark color="secondary" @click="isSignUp = true">Sign Up</v-btn>
-            <v-btn v-if="isSignUp" color="primary" @click="isSignUp = false">Back</v-btn>
+            <v-btn v-if="!isSignUp" dark color="secondary" @click="isSignUp = true"> <v-icon size="15px">fas fa-user-plus</v-icon><span class="ml-2">Sign Up</span></v-btn>
+            <v-btn v-if="isSignUp" color="primary" @click="isSignUp = false"><v-icon size="15px">fas fa-arrow-left</v-icon><span class="ml-2">Back</span></v-btn>
             <v-spacer/>
-            <v-btn v-if="!isSignUp" color="primary" @click="signIn()">Sign In</v-btn>
-            <v-btn v-if="isSignUp" dark color="secondary" @click="signUp()">Sign Up</v-btn>
+            <v-btn v-if="!isSignUp" color="primary" @click="signIn()"><span class="mr-2">Sign In</span><v-icon size="15px">fas fa-sign-in-alt</v-icon> </v-btn>
+            <v-btn v-if="isSignUp" dark color="secondary" @click="signUp()"> <v-icon size="15px">fas fa-user-plus</v-icon><span class="ml-2">Sign Up</span></v-btn>
 
           </v-card-actions>
         </v-card>
@@ -34,7 +34,7 @@
     >
       {{ snackbar.text }}
       <v-btn
-        color="pink"
+        color="accent"
         flat
         @click="snackbar.state = false"
       >

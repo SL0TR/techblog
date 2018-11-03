@@ -5,7 +5,7 @@
         <v-card class="pa-4">
           <v-card-title primary-title>
             <v-flex xs12>
-              <h2 class="mb-0 display-3">{{ this.$route.params.blog.title }}</h2>
+              <h2 class="mb-0 display-3 primary--text">{{ this.$route.params.blog.title }}</h2>
               <hr class="mt-4 mb-4">
               <p class="mt-3 headline">{{ this.$route.params.blog.text }} </p>
             </v-flex>

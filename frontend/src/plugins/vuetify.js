@@ -3,11 +3,11 @@ import Vuetify from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
-  iconfont: 'md',
+  iconfont: 'fa',
   theme: {
     primary: '#880088',
     secondary: '#D9004B',
-    accent: '#8c9eff',
+    accent: '#FF7700',
     error: '#b71c1c',
     dimwhite: '#eee'
   }

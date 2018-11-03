@@ -37,7 +37,8 @@
             @click="submitPost"
             large
           >
-            <span class="mr-2">Create Post</span>
+            <v-icon size="15px">fas fa-plus</v-icon>
+            <span class="ml-2">Create Post</span>
           </v-btn>
         </v-flex>
       </v-form>
@@ -52,7 +53,7 @@
     >
       {{ snackbar.text }}
       <v-btn
-        color="secondary"
+        color="accent"
         flat
         @click="snackbar.state = false"
       >

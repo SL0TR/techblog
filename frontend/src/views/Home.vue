@@ -1,11 +1,12 @@
 <template>
   <v-layout class="homepage" align-center justify-center row>
     <v-flex xs6>
-      <h1 class="center text-xs-center display-4 pa-4">Tech<span class="font-weight-bold">Blog</span> </h1>
-      <p class="display-1 pa-4">A blog where people post tech related posts. You can sign up and start adding your post very easily.</p>
+      <h1 class="center text-xs-center display-4 pa-4 primary--text">Tech<span class="font-weight-bold secondary--text">Blog</span> </h1>
+      <p class="display-1 pa-5">A blog for technology enthusiastic people. You can sign up and start adding your post very fast and easily.</p>
     </v-flex>
-    <v-flex xs6>
-      <img class="typing-art" src="../../public/img/type.svg" alt="typing svg">
+    <v-flex xs6 class="header-img">
+      <img class="typing-art mb-5" src="../../public/img/type.svg" alt="typing svg">
+      <!-- <img class="typing-art2" src="../../public/img/tech-bg-img.png" alt="typing-art 2"> -->
     </v-flex>
   </v-layout>
 </template>
@@ -28,10 +29,25 @@ export default {
     height: 100%;
   }
 
+  .header-img {
+    position: relative;
+  }
+
   .typing-art {
     height: 400px;
     width: 100%;
     margin: 0 auto;
+    z-index: 10;
+    position: relative;
+  }
+
+  .typing-art2 {
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    height: 700px;
+    width: 500px;
+    z-index: 2;
   }
 
 </style>
