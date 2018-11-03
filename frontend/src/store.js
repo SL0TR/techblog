@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import Auth from './store/modules/auth/index'
 import Blog from './store/modules/blog/index'
 import User from './store/modules/user/index'
+import Post from './store/modules/post/index'
 
 Vue.use(Vuex)
 
@@ -18,7 +19,8 @@ const actions = {}
 const modules = {
   Auth,
   Blog,
-  User
+  User,
+  Post
 }
 
 const store = new Vuex.Store({

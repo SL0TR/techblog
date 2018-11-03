@@ -24,4 +24,11 @@ const PostSchema = new Schema({
   ] 
 });
 
+
+PostSchema.post('save', function(next) {
+  // doc.populate('user').execPopulate(function() {
+  //   next();
+  // });
+})
+
 module.exports = mongoose.model('post', PostSchema);

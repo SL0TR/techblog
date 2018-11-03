@@ -6,10 +6,8 @@
       <v-flex xs4 v-for="(post, i) in this.blogs()" :key="i">
         <v-card class="blog-cards">
           <v-card-title primary-title>
-            <div>
-              <h2 class="headline mb-0">{{ post.title }}</h2>
-              <p class="mt-3"> {{ post.text.substr(0, 150) }} </p>
-            </div>
+            <h2 class="headline mb-0">{{ post.title }}</h2>
+            <p class="mt-3"> {{ post.text }} </p>
           </v-card-title>
 
           <v-card-actions>
@@ -43,7 +41,6 @@ export default {
   },
   created () {
     this.BLOGS()
-    console.log('hello')
   }
 }
 </script>
@@ -52,10 +49,26 @@ export default {
   .blog {
     display: flex;
     margin: 0 auto;
+    height: auto;
+    padding-top: 104px;
   }
 
   .blog-cards {
     max-height: 200px;
+  }
+
+  .blog-cards p,
+  .blog-cards h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    height: 1.2em;
+    white-space: nowrap;
+    text-align: start;
+  }
+
+  .v-footer {
+    position: static !important;
   }
 
 </style>

@@ -3,6 +3,7 @@
     dark
     height="auto"
     absolute
+    :class="{ removeAbs: blog }"
   >
     <v-card
       class="flex"
@@ -10,7 +11,7 @@
       tile
     >
       <v-card-title>
-        <strong class="subheading">&copy;2018 TechBlog</strong>
+        <strong class="subheading">&copy; 2018 TechBlog</strong>
 
         <v-spacer></v-spacer>
 
@@ -28,10 +29,22 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      blog: false
+    }
+  },
+  mounted () {
+    console.log(this.$route)
+    if (this.$route === 'blog') {
+      this.blog = true
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+  .removeAbs {
+    position: relative;
+  }
 </style>
