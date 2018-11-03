@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-md text-xs-center class="blog center-container">
-    <h2 class="mb-5 display-3">The Blog</h2>
+    <h2 class="mb-5 display-3 primary--text font-weight-normal">Blog Posts</h2>
     <v-layout row wrap class="ma-0" style="flex: initial;">
       <loader-comp v-if="this.blogLoad()"/>
       <v-flex xs4 v-for="(post, i) in this.blogs()" :key="i" transition="slide-x-transition">

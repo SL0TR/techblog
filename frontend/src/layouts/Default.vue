@@ -35,6 +35,7 @@ export default {
   content: "";
   background-image: url('../../public/img/website-background-png.png');
   position: absolute;
+  background-attachment: fixed;
   left: 0;
   top: 0;
   height: 100%;

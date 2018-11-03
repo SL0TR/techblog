@@ -9,18 +9,16 @@
       flat
       dark
       href="/blogger"
-      large
     >
       <v-icon size="15px">fas fa-plus</v-icon>
-      <span class="ml-2">Create</span>
+      <span class="ml-3">Create</span>
     </v-btn>
     <v-btn
       href="/blog"
       flat
-      large
     >
-      <v-icon size="15px">fas fa-pen</v-icon>
-      <span class="ml-2">Blog</span>
+      <v-icon size="15px">far fa-newspaper</v-icon>
+      <span class="ml-3">Blog</span>
     </v-btn>
     <v-btn
       v-if="!checkSignIn()"

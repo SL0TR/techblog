@@ -1,4 +1,4 @@
-export const root = 'http://localhost:4000/'
+export const root = 'https://sl0tr-techblog.herokuapp.com/'
 
 export const api = root + 'api/'
 

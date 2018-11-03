@@ -1,6 +1,6 @@
 <template>
   <div class="circ">
-    <div class="load">Loading . . . </div>
+    <div class="load display-1 secondary--text">Loading . . . </div>
     <div class="hands"></div>
     <div class="body"></div>
     <div class="head">
@@ -31,7 +31,7 @@ export default {
   position: relative;
   margin: -250px auto;
   width: 80px; height: 80px;
-  background-color: #111;
+  background-color: #880088;
   border-radius:50px;
   box-shadow: inset -4px 2px 0px 0px rgba(240,220,220,1);
   -webkit-animation:headAnim 1.5s infinite alternate;
@@ -42,7 +42,7 @@ export default {
   position: relative;
   margin: 90px auto;
   width: 140px; height: 120px;
-  background-color: #111;
+  background-color: #880088;
   border-radius: 50px/25px ;
   box-shadow: inset -5px 2px 0px 0px rgba(240,220,220,1);
   -webkit-animation:bodyAnim 1.5s infinite alternate;
@@ -77,7 +77,7 @@ export default {
   margin-top: 140px;
   width: 120px;height: 120px;
   position: absolute;
-  background-color: #111;
+  background-color: #880088;
   border-radius:20px;
   box-shadow:-1px -4px 0px 0px rgba(240,220,220,1);
   -webkit-transform:rotate(45deg);
@@ -89,9 +89,10 @@ export default {
 
 .load {
   position: absolute;
-  width: 7ch; height: 32px;
+  width: 7ch;
+  height: 42px;
   text-align: left;
-  line-height: 32px;
+  line-height: 47px;
   margin: -10px auto;
   -webkit-font-smoothing: antialiased;
   font-family: 'Julius Sans One', sans-serif;

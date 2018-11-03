@@ -2,7 +2,6 @@
   <v-footer
     dark
     height="auto"
-    absolute
     :class="{ removeAbs: changeFooter }"
   >
     <v-card
