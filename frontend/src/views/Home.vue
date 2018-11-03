@@ -6,7 +6,8 @@
     </v-flex>
     <v-flex xs6 class="header-img">
       <img class="typing-art mb-5" src="../../public/img/type.svg" alt="typing svg">
-      <!-- <img class="typing-art2" src="../../public/img/tech-bg-img.png" alt="typing-art 2"> -->
+      <img class="typing-art2" src="../../public/img/text-editor.svg" alt="typing-art 2">
+      <img class="typing-art3" src="../../public/img/pic-svg.svg" alt="typing-art 2">
     </v-flex>
   </v-layout>
 </template>
@@ -43,11 +44,22 @@ export default {
 
   .typing-art2 {
     position: absolute;
-    top: -30%;
-    right: 10%;
-    height: 700px;
-    width: 500px;
+    top: 10%;
+    left: 5%;
+    opacity: .8;
+    height: 200px;
+    width: 200px;
+    z-index: 15;
+  }
+
+  .typing-art3 {
+    position: absolute;
+    top: -20%;
+    right: 20%;
+    height: 200px;
+    width: 200px;
     z-index: 2;
+    opacity: .6;
   }
 
 </style>
