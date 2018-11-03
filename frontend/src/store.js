@@ -8,7 +8,9 @@ import Post from './store/modules/post/index'
 
 Vue.use(Vuex)
 
-const state = {}
+const state = {
+  me: false
+}
 
 const getters = {}
 

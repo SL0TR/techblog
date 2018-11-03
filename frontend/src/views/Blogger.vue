@@ -101,7 +101,8 @@ export default {
       if (this.post.title && this.post.text) {
         try {
           await this.POST(this.post)
-          console.log('submitted!')
+          this.snackbar.text = 'Post Submitted!'
+          this.snackbar.state = true
         } catch (err) {
           console.log(err)
           this.snackbar.text = 'Authentication error!!'

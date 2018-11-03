@@ -3,7 +3,7 @@
     dark
     height="auto"
     absolute
-    :class="{ removeAbs: blog }"
+    :class="{ removeAbs: changeFooter }"
   >
     <v-card
       class="flex"
@@ -34,10 +34,9 @@ export default {
       blog: false
     }
   },
-  mounted () {
-    console.log(this.$route)
-    if (this.$route === 'blog') {
-      this.blog = true
+  computed: {
+    changeFooter () {
+      return this.$route.name === 'blog'
     }
   }
 }
