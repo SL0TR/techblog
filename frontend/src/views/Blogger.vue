@@ -32,9 +32,10 @@
         <v-flex xs12 class="make-flex" justify-end>
           <v-btn
             class="mt-4"
-            color="orange"
+            color="primary"
             dark
             @click="submitPost"
+            large
           >
             <span class="mr-2">Create Post</span>
           </v-btn>
@@ -51,7 +52,7 @@
     >
       {{ snackbar.text }}
       <v-btn
-        color="orange"
+        color="secondary"
         flat
         @click="snackbar.state = false"
       >

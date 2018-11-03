@@ -5,13 +5,22 @@
         <v-card class="pa-4">
           <v-card-title primary-title>
             <v-flex xs12>
-              <h2 class="mb-0 display-2">{{ this.$route.params.blog.title }}</h2>
+              <h2 class="mb-0 display-3">{{ this.$route.params.blog.title }}</h2>
               <hr class="mt-4 mb-4">
-              <p class="mt-3 body-2">{{ this.$route.params.blog.text }} </p>
+              <p class="mt-3 headline">{{ this.$route.params.blog.text }} </p>
             </v-flex>
           </v-card-title>
           <v-card-actions >
-            <v-flex row justify-center align-center>
+            <v-flex>
+              <v-btn
+                dark
+                outline
+                large
+                color="primary"
+                href="/blog"
+              >
+                <span class="mr-2">Go Back</span>
+              </v-btn>
               <!-- <p class="subheading"> <strong>Author:</strong> {{ this.$route.params.blog.author.username }}</p> -->
             </v-flex>
           </v-card-actions>

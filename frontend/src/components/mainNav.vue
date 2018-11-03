@@ -15,22 +15,25 @@
     <v-btn
       href="/blog"
       flat
+      large
     >
       <span class="mr-2">Blog</span>
     </v-btn>
     <v-btn
       v-if="!checkSignIn()"
       dark
-      color="orange"
+      color="secondary"
       href="/login"
+      large
     >
       <span class="mr-2">Login / Signup</span>
     </v-btn>
     <v-btn
       v-if="checkSignIn()"
       dark
-      color="orange"
+      color="secondary"
       @click="logout"
+      large
     >
       <span class="mr-2">Logout</span>
     </v-btn>

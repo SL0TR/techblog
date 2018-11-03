@@ -14,11 +14,11 @@
             </v-form>
           </v-card-text>
           <v-card-actions class="pb-3">
-            <v-btn v-if="!isSignUp" dark color="orange" @click="isSignUp = true">Sign Up</v-btn>
+            <v-btn v-if="!isSignUp" dark color="secondary" @click="isSignUp = true">Sign Up</v-btn>
             <v-btn v-if="isSignUp" color="primary" @click="isSignUp = false">Back</v-btn>
             <v-spacer/>
             <v-btn v-if="!isSignUp" color="primary" @click="signIn()">Sign In</v-btn>
-            <v-btn v-if="isSignUp" dark color="orange" @click="signUp()">Sign Up</v-btn>
+            <v-btn v-if="isSignUp" dark color="secondary" @click="signUp()">Sign Up</v-btn>
 
           </v-card-actions>
         </v-card>
