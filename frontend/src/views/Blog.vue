@@ -1,22 +1,19 @@
 <template>
-  <v-container grid-list-md text-xs-center>
-    <v-layout>
-      <v-flex>
-        <h1 class="mb-5">Blog</h1>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs4 v-for="(post, i) in blogs" :key="i">
-        <v-card>
+  <v-container grid-list-md text-xs-center class="blog center-container">
+    <h2 class="mb-5 display-3">The Blog</h2>
+    <v-layout row wrap class="ma-0" style="flex: initial;">
+      <h2 v-if="this.blogLoad()">Loading</h2>
+      <v-flex xs4 v-for="(post, i) in this.blogs()" :key="i">
+        <v-card class="blog-cards">
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">{{ post.title }}</h3>
-              <p class="mt-5"> {{ post.text }} </p>
+              <h2 class="headline mb-0">{{ post.title }}</h2>
+              <p class="mt-3"> {{ post.text.substr(0, 150) }} </p>
             </div>
           </v-card-title>
 
           <v-card-actions>
-            <v-btn flat color="orange">Read</v-btn>
+            <v-btn flat color="orange" @click="singleBlog(post)">Read</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -25,29 +22,40 @@
 </template>
 
 <script>
-import axios from '@/plugins/axios'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   data () {
     return {
-      blogs: ''
     }
   },
   methods: {
-    getData () {
-      axios.get('http://localhost:4000/api/posts')
-        .then(res => {
-          let { data } = res
-          this.blogs = data
-          console.log(this.blogs)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+    ...mapGetters([
+      'blogs',
+      'blogLoad'
+    ]),
+    ...mapActions([
+      'BLOGS'
+    ]),
+    singleBlog (data) {
+      this.$router.push({ name: 'single-post', params: { blog: data } })
     }
   },
   created () {
-    this.getData()
+    this.BLOGS()
+    console.log('hello')
   }
 }
 </script>
+
+<style scoped>
+  .blog {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .blog-cards {
+    max-height: 200px;
+  }
+
+</style>

@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import Blogger from './views/Blogger.vue'
 import Blog from './views/Blog.vue'
+import SinglePost from './views/SinglePost.vue'
+
 import store from './store/modules/auth/index'
 
 // const ifNotAuthenticated = (to, from, next) => {
@@ -52,6 +54,13 @@ export default new Router({
       meta: { layout: 'default' },
       component: Blogger,
       beforeEnter: ifAuthenticated
+    },
+    {
+      path: '/single-post',
+      name: 'single-post',
+      meta: { layout: 'default' },
+      component: SinglePost,
+      props: true
     }
   ]
 })

@@ -10,7 +10,6 @@ exports.decodeToken = function() {
     if (req.query && req.query.hasOwnProperty('access_token')) {
       req.headers.authorization = 'Bearer ' + req.query.access_token;
     }
-
     checkToken(req, res, next);
   };
 };
@@ -22,9 +21,6 @@ exports.getFreshUser = function() {
         if (!user) {
           // if no user is found it was not
           // it was a valid JWT but didn't decode
-          // to a real user in our DB. Either the user was deleted
-          // since the client got the JWT, or
-          // it was a JWT from some other source
           res.status(401).send('Unauthorized');
         } else {
           // update req.user with fresh user from

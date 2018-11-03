@@ -1,13 +1,20 @@
 <template>
-  <v-toolbar app >
+  <v-toolbar app dark color="primary">
     <v-toolbar-title class="headline" >
       <router-link to="/">TechBlog</router-link>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn
+      v-if="checkSignIn()"
       flat
-      color="orange"
+      dark
+      href="/blogger"
+    >
+      <span class="mr-2">Create</span>
+    </v-btn>
+    <v-btn
       href="/blog"
+      flat
     >
       <span class="mr-2">Blog</span>
     </v-btn>
@@ -57,7 +64,7 @@ export default {
 <style scoped>
 .headline a {
   text-decoration: none;
-  color: #2e2e2e;
+  color: #fff;
 }
 
 </style>

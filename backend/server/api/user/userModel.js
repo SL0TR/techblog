@@ -41,7 +41,7 @@ UserSchema.methods = {
   },
   toJson: function() {
     var obj = this.toObject()
-    delete objs.password
+    delete obj.password
     return obj;
   }
 };

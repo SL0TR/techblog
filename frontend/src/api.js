@@ -6,8 +6,8 @@ export const auth = root + 'auth/'
 
 export const signup = api + 'users'
 
+export const me = signup + '/me'
+
+export const blogs = api + 'posts'
+
 export const login = auth + 'signin'
-
-// export const userList = api + 'v1/secure'
-
-// export const user = userList + '/user'

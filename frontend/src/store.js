@@ -2,6 +2,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Auth from './store/modules/auth/index'
+import Blog from './store/modules/blog/index'
+import User from './store/modules/user/index'
 
 Vue.use(Vuex)
 
@@ -14,7 +16,9 @@ const mutations = {}
 const actions = {}
 
 const modules = {
-  Auth
+  Auth,
+  Blog,
+  User
 }
 
 const store = new Vuex.Store({
