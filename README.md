@@ -1,4 +1,4 @@
-# [A Todo App](https://sl0tr.github.io/techblog/)
+# [TechBlog](https://sl0tr.github.io/techblog/)
 
 ## Core Tech stack
 ---
