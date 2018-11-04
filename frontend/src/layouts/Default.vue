@@ -13,6 +13,7 @@ import mainNav from '../components/mainNav'
 import footerComp from '../components/footerComp'
 
 export default {
+  name: 'LayoutDefault',
   components: {
     mainNav,
     footerComp
