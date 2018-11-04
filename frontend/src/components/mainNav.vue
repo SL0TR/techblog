@@ -1,20 +1,20 @@
 <template>
   <v-toolbar app dark color="primary">
     <v-toolbar-title class="headline" >
-      <router-link to="/"> <span class="white--text font-weight-light headline">Tech</span><span class="secondary--text font-weight-black headline">Blog</span></router-link>
+      <router-link :to="{name: 'home'}"> <span class="white--text font-weight-light headline">Tech</span><span class="secondary--text font-weight-black headline">Blog</span></router-link>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn
       v-if="checkSignIn()"
       flat
       dark
-      href="/blogger"
+      :to="{name: 'blogger'}"
     >
       <v-icon size="15px">fas fa-plus</v-icon>
       <span class="ml-3">Create</span>
     </v-btn>
     <v-btn
-      href="/blog"
+      :to="{name: 'blog'}"
       flat
     >
       <v-icon size="15px">far fa-newspaper</v-icon>
@@ -24,7 +24,7 @@
       v-if="!checkSignIn()"
       dark
       color="secondary"
-      href="/login"
+      :to="{name: 'login'}"
     >
       <span class="mr-2">Login / Signup</span>
     </v-btn>

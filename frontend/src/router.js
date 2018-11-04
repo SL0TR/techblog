@@ -25,7 +25,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: '/techblog/',
   routes: [
     {
       path: '/',
@@ -33,7 +33,7 @@ export default new Router({
       component: () => import('@/layouts/Default.vue'),
       children: [
         {
-          path: '',
+          path: '/',
           name: 'home',
           component: () => import('@/views/Home.vue')
         },

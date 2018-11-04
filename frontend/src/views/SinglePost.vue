@@ -17,7 +17,7 @@
                 outline
                 large
                 color="primary"
-                href="/blog"
+                :to="{name: 'blog'}"
               >
                 <span class="mr-2">Go Back</span>
               </v-btn>
